@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Register</title>
+  <!-- google fonts -->
+  <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- google fonts -->
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style-starter.css">
+  <!-- Template CSS -->
+</head>
+
+<body>
+  <!--header-->
+  <div th:replace="~{shared/navigation :: navigation}"></div>
+  <!-- //header -->
+
+
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container py-2">
+        <h2 class="title">Contact Us</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#url">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Contact </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+<!-- contact-form -->
+<section class="w3l-contact" id="contact">
+  <div class="contact-infubd py-5">
+    <div class="container py-lg-3">
+      <div class="contact-grids row">
+        <div class="col-lg-6 contact-left">
+          <div class="partners">
+            <div class="cont-details">
+              <h5>Get in touch</h5>
+              <p class="mt-3 mb-4">Hi there, We are available 24/7 by fax, e-mail or by phone. Drop us line so we can talk
+                futher about that.</p>
+            </div>
+            <div class="hours">
+              <h6 class="mt-4">Email:</h6>
+              <p> <a href="mailto:suport@template.com">
+                suport@template.com</a></p>
+              <h6 class="mt-4">Visit Us:</h6>
+              <p> 1053 Budapest, Egyetem tér 1–3. at Eötvös Loránd Tudományegyetem Budapest</p>
+              <h6 class="mt-4">Contact:</h6>
+              <p class="margin-top"><a href="tel:+36-555-999-69">+36-555-999-69</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- REGISTRATION FORM -->
+        <div class="col-lg-6 mt-lg-0 mt-5 contact-right">
+          <form action="#" th:action="@{/register}" th:object="${RegisterRequest}" method="post" class="signin-form">
+            <div class="input-grids">
+              <div class="form-group">
+                <input type="text" placeholder="Username*" class="contact-input" th:field="*{username}" required/>
+                <p style="color: red" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
+                <div th:if="${usernameTaken != null}">
+                  <p style="color: red" th:text="${usernameTaken}" ></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="email"   placeholder="Email*" class="contact-input" th:field="*{email}" required/>
+                <p style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
+                <div th:if="${emailTaken != null}">
+                  <p style="color: red" th:text="${emailTaken}" ></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="password"  placeholder="Password*" class="contact-input" th:field="*{password}" required=/>
+                <p style="color: red" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+              </div>
+              <div class="form-group">
+                <input type="password"  placeholder="Confirm Password*" class="contact-input" th:field="*{confirmPassword}" required=/>
+                <p style="color: red" th:if="${#fields.hasErrors('confirmPassword')}" th:errors="*{confirmPassword}"></p>
+              </div>
+            </div>
+            <div class="text-right">
+              <button class="btn btn-style btn-primary">Register</button>
+            </div>
+          </form>
+        </div>
+        <!-- //REGISTRATION FORM -->
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /contact-form -->
+
+
+  <!-- FOOTER -->
+  <div th:replace="~{shared/footer :: footer}"></div>
+  <!-- /FOOTER -->
+
+
+  <!-- Template JavaScript -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/theme-change.js"></script>
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+
+  <script src="assets/js/passwordValidator.js"></script>
+
+  <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

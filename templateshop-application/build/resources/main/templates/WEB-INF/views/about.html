@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About us</title>
+  <!-- google fonts -->
+  <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- google fonts -->
+  <!-- Template CSS -->
+  <link rel="stylesheet" th:href="@{/assets/css/style-starter.css}">
+  <!-- Template CSS -->
+</head>
+
+<body>
+  <!--header-->
+  <div th:replace="~{shared/navigation :: navigation}"></div>
+  <!-- //header -->
+
+
+  <!-- about breadcrumb -->
+  <section class="w3l-about-breadcrumb text-left">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+      <div class="container py-2">
+        <h2 class="title">About Us</h2>
+        <ul class="breadcrumbs-custom-path mt-2">
+          <li><a href="#url">Home</a></li>
+          <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> About </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- //about breadcrumb -->
+  <!-- /about-6-->
+  <section class="w3l-cta4 py-5">
+      <div class="container py-lg-5">
+        <div class="ab-section text-center">
+          <h6 class="sub-title">About Us</h6>
+          <h3 class="hny-title">Some students can have dreams</h3>
+          <p class="py-3 mb-3">We all started as university students who had an assignment. Over time worked out a good
+            business strategy that can help programmers all over the world deal with frontend development easier and more
+          efficient. Our goal now is to finish our assignment and make you one of our happy customers!</p>
+            <a href="services.html" class="btn btn-style btn-primary">Read More</a>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-9 mx-auto">
+            <img src="assets/images/banner3.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- //about-6-->
+   <!-- /content-6-->
+   <section class="w3l-content-6 py-5">
+    <div class="container py-lg-5">
+      <div class="row">
+        <div class="col-lg-6 content-6-left pr-lg-5">
+          <h6 class="sub-title">Why Choose Us</h6>
+          <h3 class="hny-title">Everybody can program a website!</h3>
+        </div>
+        <div class="col-lg-6 content-6-right mt-lg-0 mt-4">
+          <p class="mb-3">
+            As students ourselves we know the struggle it can get a programmer to write a compatible CSS file for the project. That's why it is our job to write
+            and support you with as many and well written templates as possible.
+          </p>
+            <p class="mb-3">
+              We started as a little project, and now we are aiming for the sky. Our main goal is you satisfactory and perfection. We will support you if you have problems
+              or will fix our files according to our customers review
+            </p>
+              <a href="services.html" class="btn btn-style btn-primary mt-4">Read More</a>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- //content-6-->
+<section class="w3l-grids1">
+  <div class="hny-three-grids py-5">
+    <div class="container py-lg-5">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 mt-0 grids5-info">
+          <a href="#url"><img src="assets/images/g1.jpg" class="img-fluid" alt=""></a>
+          <h5>Buy me a Coffee</h5>
+          <h4><a href="#url">Investor Relations</a></h4>
+          <p>As sad as it is right now we are still a little project, but we are looking to expand and make our project one of the biggest int the world.
+          For that we need your help to help us become more than just some students!
+          </p>
+        </div>
+        <div class="col-md-4 col-sm-6 mt-sm-0 mt-5 grids5-info">
+          <a href="#url"><img src="assets/images/g2.jpg" class="img-fluid" alt=""></a>
+          <h5>Privacy</h5>
+          <h4><a href="#url"> 
+            Partner With Care</a></h4>
+          <p>We fully understand our customers rights and respect your privacy.We only store your credentials no more no less,
+          so you dont have to worry about cookies</p>
+        </div>
+        <div class="col-md-4 col-sm-6 mt-md-0 mt-5 grids5-info">
+          <a href="#url"><img src="assets/images/g3.jpg" class="img-fluid" alt=""></a>
+          <h5>We care</h5>
+          <h4><a href="#url">Customer Care</a></h4>
+          <p>We can't do our job if our customers are not satisfied so we put extra care int your opinion so please tell us how
+          we can improve</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- stats -->
+  <section class="w3l-statshny py-5" id="stats">
+    <div class="container py-lg-5 py-md-4">
+      <div class="w3-stats-inner-info">
+        <div class="row">
+          <div class="col-lg-4 col-6 stats_info counter_grid text-left">
+            <span class="fa fa-smile-o"></span>
+            <p class="counter">1730</p>
+            <h4>Happy Customers</h4>
+          </div>
+          <div class="col-lg-4 col-6 stats_info counter_grid1 text-left">
+            <span class="fa fa-users"></span>
+            <p class="counter">730</p>
+            <h4>Custom Products</h4>
+          </div>
+          <div class="col-lg-4 col-6 stats_info counter_grid mt-lg-0 mt-5 text-left">
+            <span class="fa fa-database"></span>
+            <p class="counter">30</p>
+            <h4>branches</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //stats -->
+
+  <!-- FOOTER -->
+  <div th:replace="~{shared/footer :: footer}"></div>
+  <!-- /FOOTER -->
+
+  <!-- Template JavaScript -->
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/theme-change.js"></script>
+  <!-- stats number counter-->
+  <script src="assets/js/jquery.waypoints.min.js"></script>
+  <script src="assets/js/jquery.countup.js"></script>
+  <script>
+    $('.counter').countUp();
+  </script>
+  <!-- //stats number counter -->
+  <!--/MENU-JS-->
+  <script>
+    $(window).on("scroll", function () {
+      var scroll = $(window).scrollTop();
+
+      if (scroll >= 80) {
+        $("#site-header").addClass("nav-fixed");
+      } else {
+        $("#site-header").removeClass("nav-fixed");
+      }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+      $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+      $(window).on("resize", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+      });
+    });
+  </script>
+  <!--//MENU-JS-->
+
+  <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

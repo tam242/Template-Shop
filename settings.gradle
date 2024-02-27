@@ -1,0 +1,4 @@
+rootProject.name = 'templateshop'
+
+include 'templateshop-application'
+include 'templateshop-domain'
